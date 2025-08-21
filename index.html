@@ -1,25 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>夏季居家安衞攻略</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>夏季居家安衞攻略</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>夏季居家安衞攻略</h1>
-    </header>
-    <main>
-        <section>
-            <h2>居家安全小貼士</h2>
-            <ul>
-                <li>保持窗戶鎖好</li>
-                <li>檢查煙霧警報器</li>
-                <li>妥善存放清潔劑</li>
-            </ul>
-        </section>
-    </main>
-    <script src="script.js"></script>
+  <header>
+    <h1>夏季居家安衞攻略</h1>
+    <p>蟑螂、霉味、蚊子、空污一次搞定！</p>
+    <button onclick="toggleDarkMode()">🌗 切換深色模式</button>
+  </header>
+
+  <main class="section">
+    <section class="card-grid">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>🪳 蟑螂</h3>
+            <p>高溫潮濕＋食物殘渣＝蟑螂大軍</p>
+          </div>
+          <div class="card-back">
+            使用洗碗精水封地漏、檸檬皮驅蟲，保持廚房乾淨。
+            <br><button onclick="speak('蟑螂防治建議：使用洗碗精水封地漏')">🔊 播放語音</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>👋 霉味</h3>
+            <p>濕氣重，衣櫥鞋櫃容易發霉</p>
+          </div>
+          <div class="card-back">
+            小蘇打除濕、防霉、吸臭，放置於角落吸濕氣。
+            <br><button onclick="speak('霉味防治建議：使用小蘇打吸濕除臭')">🔊 播放語音</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>🦟 蚊子</h3>
+            <p>叮咬癢不停，止癢方式要正確</p>
+          </div>
+          <div class="card-back">
+            冷敷、茶包、蘆薈膠舒緩，避免壓十字與抓癢。
+            <br><button onclick="speak('蚊子止癢建議：冷敷、茶包、蘆薈膠')">🔊 播放語音</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>⛔ 空污晾衣</h3>
+            <p>PM2.5、塵蟎附著衣物</p>
+          </div>
+          <div class="card-back">
+            避開空污高峰時段，選通風乾燥處晾衣。
+            <br><button onclick="speak('空污防範建議：避開高峰時段晾衣')">🔊 播放語音</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz">
+      <h2>🎯 自我檢測小測驗</h2>
+      <form id="quiz">
+        <label><input type="checkbox" name="q1"> 廚房有食物殘渣</label><br>
+        <label><input type="checkbox" name="q2"> 衣櫥有霉味</label><br>
+        <label><input type="checkbox" name="q3"> 經常被蚊子叮咬</label><br>
+        <label><input type="checkbox" name="q4"> 晾衣時間不固定</label><br>
+        <button type="button" onclick="showAdvice()">查看建議</button>
+      </form>
+      <div id="advice"></div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 夏季居家安衞宣導 | 設計風格：Zen × 清新 × 實用
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -3,9 +3,10 @@ function calculateScore() {
   let score = 100 - checked * 25;
 
   let msg = "";
-  if (score >= 75) msg = "✅ 非常健康";
+
+  if (score >= 75) msg = "✅ 很健康";
   else if (score >= 50) msg = "⚠️ 稍微注意";
-  else msg = "🚨 需要改善";
+  else msg = "🚨 建議改善";
 
   document.getElementById("result").innerHTML = `
     <h3>健康指數：${score}</h3>

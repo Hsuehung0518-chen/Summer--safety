@@ -11,7 +11,7 @@ body {
   background: linear-gradient(135deg, #38a169, #68d391);
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px;
 }
 
 /* 卡片 */
@@ -24,22 +24,9 @@ body {
 
 .card {
   background: white;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
   text-align: center;
-  transition: all 0.3s ease;
-}
-
-.card i {
-  font-size: 40px;
-  color: #38a169;
-  margin-bottom: 10px;
-}
-
-/* ✅ 卡片動畫 */
-.card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 /* 區塊 */
@@ -52,22 +39,18 @@ body {
 
 /* 按鈕 */
 button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
   background: #38a169;
   color: white;
-  padding: 12px;
-  border-radius: 10px;
   border: none;
-  width: 100%;
-  font-size: 18px;
-}
-
-button:hover {
-  background: #2f855a;
+  border-radius: 10px;
 }
 
 /* QR */
 .qr {
-  width: 150px;
+  width: 140px;
   margin-top: 10px;
 }
-``

@@ -1,0 +1,56 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background: #f4fbf8;
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #38a169, #68d391);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* 卡片 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 區塊 */
+.family, .app {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* 按鈕 */
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: #38a169;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* QR */
+.qr {
+  width: 140px;
+  margin-top: 10px;
+}

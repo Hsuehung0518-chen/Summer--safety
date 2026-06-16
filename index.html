@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>夏季居家健康指南</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>夏季居家健康指南</title>
+
+  <!-- ✅ 正確 CDN -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -17,36 +20,35 @@
 
 <main>
 
-<!-- 卡片 -->
 <section class="cards">
 
   <div class="card">
     <i class="fa-solid fa-bug"></i>
     <h3>蟑螂防治</h3>
-    <p>保持廚房乾淨可降低蟲害</p>
+    <p>保持廚房乾淨</p>
   </div>
 
   <div class="card">
     <i class="fa-solid fa-cloud-rain"></i>
     <h3>濕氣控制</h3>
-    <p>除濕可避免霉菌與過敏</p>
-  </div>
-
-  <div class="card">
-    <i class="fa-solid fa-mosquito"></i>
-    <h3>蚊蟲管理</h3>
-    <p>避免積水防止孳生</p>
+    <p>避免潮濕與發霉</p>
   </div>
 
   <div class="card">
     <i class="fa-solid fa-wind"></i>
-    <h3>空氣品質</h3>
-    <p>選對時間晾衣更健康</p>
+    <h3>通風</h3>
+    <p>保持空氣流通</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-shirt"></i>
+    <h3>晾衣</h3>
+    <p>避開空污時段</p>
   </div>
 
 </section>
 
-<!-- 家庭測驗 -->
+<!-- ✅ 家庭檢測 -->
 <section class="family">
   <h2>👨‍👩‍👧 家庭健康檢測</h2>
 
@@ -60,16 +62,15 @@
   <div id="result"></div>
 </section>
 
-<!-- AI導流 -->
+<!-- ✅ AI導流 -->
 <section class="app">
-  <h2>📱 進階健康助手</h2>
-  <p>由AI每天幫你安排健康任務</p>
+  <h2>📱 AI健康助手</h2>
+  <p>讓 AI 幫你每天管理健康</p>
 
-  <button onclick="goToApp()" class="cta">
-    👉 開啟 AI 健康教練
-  </button>
+  <button onclick="goToApp()">👉 進入 AI App</button>
 
-  <img src="qr.png" alt="QR Code" class="qr">
+  <p>掃描 QR Code</p>
+  <img src="qr.png" class="qr">
 </section>
 
 </main>
@@ -78,6 +79,9 @@
   © 2026 居家健康宣導
 </footer>
 
+<!-- ✅ JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
+``

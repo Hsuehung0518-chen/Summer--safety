@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>夏季居家健康指南</title>
 
-  <!-- ✅ 正確 CDN -->
+  <!-- ✅ CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ✅ Icon CDN 正確寫法 -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -15,7 +18,7 @@
 
 <header class="hero">
   <h1>🌿 夏季居家健康指南</h1>
-  <p>守護家人健康，從每天的小習慣開始</p>
+  <p>守護家人健康，從每天小習慣開始</p>
 </header>
 
 <main>
@@ -31,19 +34,19 @@
   <div class="card">
     <i class="fa-solid fa-cloud-rain"></i>
     <h3>濕氣控制</h3>
-    <p>避免潮濕與發霉</p>
+    <p>防止霉味</p>
   </div>
 
   <div class="card">
     <i class="fa-solid fa-wind"></i>
-    <h3>通風</h3>
-    <p>保持空氣流通</p>
+    <h3>空氣流通</h3>
+    <p>增加通風</p>
   </div>
 
   <div class="card">
     <i class="fa-solid fa-shirt"></i>
-    <h3>晾衣</h3>
-    <p>避開空污時段</p>
+    <h3>晾衣建議</h3>
+    <p>避開污染時段</p>
   </div>
 
 </section>
@@ -55,7 +58,7 @@
   <label><input type="checkbox"> 廚房有殘渣</label><br>
   <label><input type="checkbox"> 衣櫥潮濕</label><br>
   <label><input type="checkbox"> 常被蚊子叮</label><br>
-  <label><input type="checkbox"> 晾衣不固定</label><br>
+  <label><input type="checkbox"> 晾衣時間不固定</label><br>
 
   <button onclick="calculateScore()">查看結果</button>
 
@@ -64,12 +67,11 @@
 
 <!-- ✅ AI導流 -->
 <section class="app">
-  <h2>📱 AI健康助手</h2>
-  <p>讓 AI 幫你每天管理健康</p>
+  <h2>📱 AI 健康助手</h2>
 
-  <button onclick="goToApp()">👉 進入 AI App</button>
+  <button onclick="goToApp()">👉 開啟 AI App</button>
 
-  <p>掃描 QR Code</p>
+  <p>手機掃描：</p>
   <img src="qr.png" class="qr">
 </section>
 
@@ -79,7 +81,6 @@
   © 2026 居家健康宣導
 </footer>
 
-<!-- ✅ JS -->
 <script src="script.js"></script>
 
 </body>

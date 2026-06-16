@@ -1,64 +1,73 @@
 body {
   font-family: "Noto Sans TC", sans-serif;
-  background-color: #f7fdf9;
-  color: #222;
-  margin: 0;
-  padding: 20px;
+  background: #f4fbf8;
   font-size: 20px;
-  line-height: 1.8;
+  margin: 0;
+  color: #333;
 }
 
-header {
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #38a169, #68d391);
+  color: white;
   text-align: center;
-  margin-bottom: 20px;
+  padding: 40px 20px;
 }
 
-h1 {
-  color: #2f855a;
-  font-size: 32px;
-}
-
-h2 {
-  color: #2f855a;
-}
-
-.card-grid {
+/* 卡片 */
+.cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 15px;
+  padding: 20px;
 }
 
 .card {
   background: white;
-  border: 2px solid #e0f2e9;
-  padding: 15px;
-  border-radius: 15px;
+  border-radius: 20px;
+  padding: 20px;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
+.card i {
+  font-size: 40px;
+  color: #38a169;
+  margin-bottom: 10px;
+}
+
+/* ✅ 卡片動畫 */
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 區塊 */
+.family, .app {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* 按鈕 */
 button {
-  margin-top: 15px;
+  background: #38a169;
+  color: white;
   padding: 12px;
-  font-size: 18px;
   border-radius: 10px;
   border: none;
-  background-color: #38a169;
-  color: white;
-  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
 }
 
 button:hover {
-  background-color: #2f855a;
+  background: #2f855a;
 }
 
-.family, .app {
-  margin-top: 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
+/* QR */
+.qr {
+  width: 150px;
+  margin-top: 10px;
 }
-
-#result {
-  margin-top: 15px;
-  font-weight: bold;
-}
+``

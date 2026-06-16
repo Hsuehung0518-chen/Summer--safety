@@ -1,22 +1,26 @@
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
+function calculateScore() {
+  const checked = document.querySelectorAll("input:checked").length;
+
+  let score = 100 - checked * 25;
+  let message = "";
+
+  if (score >= 75) {
+    message = "✅ 非常健康！";
+  } else if (score >= 50) {
+    message = "⚠️ 稍微注意";
+  } else {
+    message = "🚨 建議立即改善";
+  }
+
+  document.getElementById("result").innerHTML = `
+    <p>你的家庭健康指數：${score} 分</p>
+    <p>${message}</p>
+    <button onclick="goToApp()">交給 AI 幫你管理</button>
+  `;
 }
 
-function speak(text) {
-  const msg = new SpeechSynthesisUtterance(text);
-  msg.lang = 'zh-TW';
-  window.speechSynthesis.speak(msg);
-}
 
-function showAdvice() {
-  const q1 = document.querySelector('input[name="q1"]').checked;
-  const q2 = document.querySelector('input[name="q2"]').checked;
-  const q3 = document.querySelector('input[name="q3"]').checked;
-  const q4 = document.querySelector('input[name="q4"]').checked;
-  let result = '';
-  if (q1) result += '🪳 建議：加強廚房清潔並密封地漏<br>';
-  if (q2) result += '👕 建議：小蘇打吸濕除臭<br>';
-  if (q3) result += '🦟 建議：使用蚊帳或檸檬驅蚊<br>';
-  if (q4) result += '⛅ 建議：避開空污高峰時段晾衣<br>';
-  document.getElementById('advice').innerHTML = result || '👍 目前狀況良好，繼續保持！';
+function goToApp() {
+  window.open("https://YOUR_AI_APP_LINK", "_blank");
 }
+``

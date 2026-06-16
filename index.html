@@ -1,73 +1,81 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>夏季居家健康指南</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏季居家健康指南</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<header>
+<header class="hero">
   <h1>🌿 夏季居家健康指南</h1>
-  <p>簡單檢查，保護全家健康</p>
+  <p>守護家人健康，從每天的小習慣開始</p>
 </header>
 
 <main>
 
-  <!-- 卡片學習 -->
-  <section class="card-grid">
-    <div class="card">
-      <h3>🪳 蟑螂</h3>
-      <p>廚房不乾淨容易吸引蟑螂</p>
-    </div>
+<!-- 卡片 -->
+<section class="cards">
 
-    <div class="card">
-      <h3>👋 霉味</h3>
-      <p>濕氣重會讓衣櫥發霉</p>
-    </div>
+  <div class="card">
+    <i class="fa-solid fa-bug"></i>
+    <h3>蟑螂防治</h3>
+    <p>保持廚房乾淨可降低蟲害</p>
+  </div>
 
-    <div class="card">
-      <h3>🦟 蚊子</h3>
-      <p>積水容易孳生蚊子</p>
-    </div>
+  <div class="card">
+    <i class="fa-solid fa-cloud-rain"></i>
+    <h3>濕氣控制</h3>
+    <p>除濕可避免霉菌與過敏</p>
+  </div>
 
-    <div class="card">
-      <h3>🌫 空氣</h3>
-      <p>空氣不好要避免外曬</p>
-    </div>
-  </section>
+  <div class="card">
+    <i class="fa-solid fa-mosquito"></i>
+    <h3>蚊蟲管理</h3>
+    <p>避免積水防止孳生</p>
+  </div>
 
-  <!-- 家庭檢測（核心） -->
-  <section class="family">
-    <h2>👨‍👩‍👧 家庭健康檢測</h2>
+  <div class="card">
+    <i class="fa-solid fa-wind"></i>
+    <h3>空氣品質</h3>
+    <p>選對時間晾衣更健康</p>
+  </div>
 
-    <label><input type="checkbox"> 廚房有食物殘渣</label><br>
-    <label><input type="checkbox"> 衣櫥有霉味</label><br>
-    <label><input type="checkbox"> 常被蚊子叮</label><br>
-    <label><input type="checkbox"> 晾衣時間不固定</label><br>
+</section>
 
-    <button onclick="calculateScore()">查看結果</button>
+<!-- 家庭測驗 -->
+<section class="family">
+  <h2>👨‍👩‍👧 家庭健康檢測</h2>
 
-    <div id="result"></div>
-  </section>
+  <label><input type="checkbox"> 廚房有殘渣</label><br>
+  <label><input type="checkbox"> 衣櫥潮濕</label><br>
+  <label><input type="checkbox"> 常被蚊子叮</label><br>
+  <label><input type="checkbox"> 晾衣不固定</label><br>
 
-  <!-- AI導流 -->
-  <section class="app">
-    <h2>📱 想更輕鬆？</h2>
-    <p>讓AI幫你每天提醒與安排</p>
+  <button onclick="calculateScore()">查看結果</button>
 
-    <button onclick="goToApp()">👉 進入AI健康助手</button>
+  <div id="result"></div>
+</section>
 
-    <p>或用手機掃描</p>
-    <img src="qr-code.png" alt="QR Code" width="150">
-  </section>
+<!-- AI導流 -->
+<section class="app">
+  <h2>📱 進階健康助手</h2>
+  <p>由AI每天幫你安排健康任務</p>
+
+  <button onclick="goToApp()" class="cta">
+    👉 開啟 AI 健康教練
+  </button>
+
+  <img src="qr.png" alt="QR Code" class="qr">
+</section>
 
 </main>
 
 <footer>
-  © 2026 家庭健康設計
+  © 2026 居家健康宣導
 </footer>
 
 <script src="script.js"></script>

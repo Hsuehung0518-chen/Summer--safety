@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="夏季居家安衛攻略：蟑螂、防霉、蚊子、空污晾衣與家庭健康檢測。" />
+  <title>夏季居家安衛攻略</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero__badge">Summer Safety</div>
+    <h1>夏季居家安衛攻略</h1>
+    <p>蟑螂、防霉、蚊子、空污晾衣，一次看懂。</p>
+
+    <div class="hero__actions">
+      <button class="btn btn--primary" type="button" data-scroll-target="cards">開始查看</button>
+      <button class="btn" type="button" id="darkModeBtn">🌗 深色模式</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="cards" aria-labelledby="cardsTitle">
+      <div class="section__title">
+        <h2 id="cardsTitle">四大居家守門卡</h2>
+        <p>點卡片可翻面，按語音可朗讀建議。</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="flip-card">
+          <button class="flip-card__inner" type="button" aria-label="查看蟑螂防治建議">
+            <span class="flip-card__front">
+              <span class="icon">🪳</span>
+              <strong>蟑螂防治</strong>
+              <small>高溫潮濕＋食物殘渣容易吸引蟑螂。</small>
+            </span>
+            <span class="flip-card__back">
+              <strong>今日建議</strong>
+              <small>保持廚房乾淨，封好地漏，垃圾不隔夜，避免留下食物殘渣。</small>
+            </span>
+          </button>
+          <button class="speak-btn" type="button" data-speak="蟑螂防治建議：保持廚房乾淨，封好地漏，垃圾不隔夜，避免留下食物殘渣。">🔊 朗讀</button>
+        </article>
+
+        <article class="flip-card">
+          <button class="flip-card__inner" type="button" aria-label="查看防霉除濕建議">
+            <span class="flip-card__front">
+              <span class="icon">💧</span>
+              <strong>防霉除濕</strong>
+              <small>濕氣重時，衣櫥、鞋櫃、角落容易產生霉味。</small>
+            </span>
+            <span class="flip-card__back">
+              <strong>今日建議</strong>
+              <small>保持通風，衣櫥可放除濕盒或小蘇打，潮濕角落定期擦拭。</small>
+            </span>
+          </button>
+          <button class="speak-btn" type="button" data-speak="防霉除濕建議：保持通風，衣櫥可放除濕盒或小蘇打，潮濕角落定期擦拭。">🔊 朗讀</button>
+        </article>
+
+        <article class="flip-card">
+          <button class="flip-card__inner" type="button" aria-label="查看蚊蟲止癢建議">
+            <span class="flip-card__front">
+              <span class="icon">🦟</span>
+              <strong>蚊蟲止癢</strong>
+              <small>積水、陰暗角落與雜物容易讓蚊子孳生。</small>
+            </span>
+            <span class="flip-card__back">
+              <strong>今日建議</strong>
+              <small>倒掉積水，叮咬後可冷敷、擦蘆薈膠，避免抓破皮膚。</small>
+            </span>
+          </button>
+          <button class="speak-btn" type="button" data-speak="蚊蟲止癢建議：倒掉積水，叮咬後可冷敷或擦蘆薈膠，避免抓破皮膚。">🔊 朗讀</button>
+        </article>
+
+        <article class="flip-card">
+          <button class="flip-card__inner" type="button" aria-label="查看空污晾衣建議">
+            <span class="flip-card__front">
+              <span class="icon">🌫️</span>
+              <strong>空污晾衣</strong>
+              <small>空污、塵蟎與濕氣可能附著在衣物上。</small>
+            </span>
+            <span class="flip-card__back">
+              <strong>今日建議</strong>
+              <small>避開空污高峰，選通風乾燥處晾衣，收衣前確認乾爽。</small>
+            </span>
+          </button>
+          <button class="speak-btn" type="button" data-speak="空污晾衣建議：避開空污高峰，選通風乾燥處晾衣，收衣前確認衣物乾爽。">🔊 朗讀</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section quiz" aria-labelledby="quizTitle">
+      <div class="section__title">
+        <h2 id="quizTitle">家庭健康檢測</h2>
+        <p>勾選目前家中狀況，系統會給你改善建議。</p>
+      </div>
+
+      <form id="quizForm" class="quiz__form">
+        <label class="check-row">
+          <input type="checkbox" name="roach" data-risk="25" />
+          <span>廚房有食物殘渣或垃圾常隔夜</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" name="mold" data-risk="25" />
+          <span>衣櫥、鞋櫃或房間角落有霉味</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" name="mosquito" data-risk="25" />
+          <span>最近常被蚊子叮，或家中有積水容器</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" name="air" data-risk="25" />
+          <span>晾衣時間不固定，常在空污或潮濕時段晾衣</span>
+        </label>
+
+        <button class="btn btn--primary" type="submit">查看建議</button>
+      </form>
+
+      <div class="result" id="result" aria-live="polite">
+        <strong>尚未檢測</strong>
+        <p>勾選上方項目後，按「查看建議」。</p>
+      </div>
+    </section>
+
+    <section class="section ai-box" aria-labelledby="aiTitle">
+      <div>
+        <h2 id="aiTitle">AI 健康助手</h2>
+        <p>未來可串接 AI App，將檢測結果變成每日任務。</p>
+      </div>
+      <button class="btn" type="button" id="appBtn">📱 開啟 AI App</button>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 夏季居家安衛宣導｜Zen × 清新 × 實用
+  </footer>
+</body>
+</html>
